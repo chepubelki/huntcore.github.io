@@ -1,0 +1,177 @@
+@import './style.css';
+
+.main {
+   padding: 160px 0 60px;
+   font-family: 'Stolzl-Book';
+}
+
+.main__inner {}
+
+.main__tag {
+   font-size: 22px;
+   line-height: 36px;
+   margin-bottom: 20px;
+   color: #928D7C;
+}
+
+.main__title {
+   margin-bottom: 80px;
+   font-size: 72px;
+   line-height: 80px;
+   max-width: 1043px;
+}
+
+.main-contacts-form {
+   display: flex;
+   justify-content: space-between;
+}
+
+.main-contacts {
+   padding: 40px;
+   background: #ED9507;
+   border-radius: 20px;
+   width: 582px;
+   margin-right: 20px;
+}
+
+.main-contacts__title {
+   font-size: 44px;
+   line-height: 52px;
+   margin-bottom: 36px;
+}
+
+.main-contacts__tag {
+   font-size: 14px;
+   line-height: 18px;
+   color: rgba(255, 255, 255, 0.6);
+   margin-bottom: 8px;
+}
+
+.main-contacts__mail {}
+
+.main-contacts__info {
+   font-size: 20px;
+   line-height: 28px;
+   margin-bottom: 36px;
+}
+
+.main-contacts__address {
+   max-width: 247px;
+}
+
+.main-contacts__link {}
+
+.text-underline {}
+
+.main-form {
+   max-width: 690px;
+}
+
+.howWeCanHelp {}
+
+.howWeCanHelp-mobile {
+   display: none;
+}
+
+.main-form__title {
+   font-size: 20px;
+   line-height: 28px;
+   margin-bottom: 16px;
+}
+
+.main-form__tags {
+   display: flex;
+   flex-wrap: wrap;
+   font-size: 14px;
+   line-height: 22px;
+   gap: 4px;
+   margin-bottom: 40px;
+}
+
+.main-form__tag {
+   width: fit-content;
+   padding: 8px 10px;
+   background: rgba(36, 36, 32, 0.4);
+   border-radius: 8px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.main-form__tag:hover {
+   background: #ED9507;
+   cursor: pointer;
+}
+.main-form__tag-checked {
+   background: #ED9507;
+}
+
+.footer__top-goModal {
+   font-family: 'Stolzl-Book';
+}
+
+.footer__contactsInfo {
+   display: none;
+}
+
+@media (max-width: 1024px) {
+   .main-contacts {
+      display: none;
+   }
+
+   .footer__contactsInfo {
+      display: block;
+   }
+}
+
+@media (max-width: 768px) {
+   .main__title {
+      margin-bottom: 60px;
+      font-size: 28px;
+      line-height: 32px;
+   }
+
+   .howWeCanHelp {
+      display: none;
+   }
+
+   .howWeCanHelp-mobile {
+      display: block;
+   }
+
+   .main-form__title {
+      color: rgba(255, 255, 255, 0.4);
+      font-size: 14px;
+      line-height: 22px;
+   }
+
+   .main-form__tags {
+      font-size: 12px;
+      line-height: 18px;
+      gap: 2px;
+   }
+
+   .main-form__tag {
+      padding: 4px;
+   }
+}
+
+@media (max-width: 425px) {
+   .main-contacts__title {
+      font-size: 20px;
+      line-height: 24px;
+      margin-bottom: 20px;
+   }
+
+   .main-contacts__tag {
+      font-size: 14px;
+      line-height: 22px;
+      margin-bottom: 4px;
+   }
+
+   .main-contacts__info {
+      font-size: 16px;
+      line-height: 20px;
+      margin-bottom: 20px;
+   }
+}

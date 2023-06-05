@@ -1,0 +1,60 @@
+@import './style.css';
+
+.main {
+   padding: 120px 0 60px;
+}
+
+.main__inner {}
+
+.main__title {
+   margin-bottom: 80px;
+   text-align: center;
+}
+
+.subtitle {}
+
+.main__desc {
+   font-family: 'Stolzl-Book';
+   font-size: 22px;
+   line-height: 36px;
+   margin-bottom: 40px;
+}
+
+.main__text {
+   font-family: 'Stolzl-Book';
+   margin-bottom: 40px;
+}
+
+.main-text__title {
+   font-size: 28px;
+   line-height: 36px;
+   margin-bottom: 40px;
+}
+
+.main-text__desc {
+   margin-bottom: 24px;
+   font-size: 20px;
+   line-height: 28px;
+}
+
+@media (max-width: 768px) {
+   .main__title {
+      margin-bottom: 16px;
+      text-align: start;
+   }
+
+   .main__desc {
+      font-size: 14px;
+      line-height: 22px;
+   }
+
+   .main-text__title {
+      font-size: 18px;
+      line-height: 24px;
+   }
+   
+   .main-text__desc {
+      font-size: 14px;
+      line-height: 22px;
+   }
+}

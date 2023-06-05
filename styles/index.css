@@ -1,0 +1,313 @@
+@import './style.css';
+
+.main {
+   padding: 120px 0 60px;
+}
+
+.main__inner {}
+
+.main__title {}
+
+.title {}
+
+.main__content {
+   display: flex;
+   justify-content: space-between;
+}
+
+.main-content__text {
+   max-width: 396px;
+   display: flex;
+   flex-direction: column;
+   gap: 40px;
+   margin-right: 20px;
+}
+
+.main-content__desc {}
+
+.main__btn {}
+
+.main-img__wrapper {
+   width: 900px;
+   height: 452px;
+}
+
+.main-img {
+   background-image: url('../images/main-img.png');
+   background-position: 50% 50%;
+   background-repeat: no-repeat;
+   background-size: cover;
+   border-radius: 16px;
+   max-width: 100%;
+   height: 100%;
+}
+
+/* ----------------------------------------------------------------------------------- */
+
+.ourCore {
+   padding: 80px 0 80px;
+}
+
+.ourCore-inner {}
+
+.ourCore__title {
+   font-family: 'Stolzl-Book';
+   max-width: 966px;
+   margin-bottom: 40px;
+   font-size: 44px;
+   line-height: 52px;
+
+}
+
+.ourCore-card__wrapper {
+   font-family: 'Stolzl-Book';
+   display: flex;
+   gap: 4px;
+   flex-wrap: wrap;
+}
+
+.ourCore__card {
+   max-width: 448px;
+   background: #242420;
+   border: 1px solid #242420;
+   border-radius: 28px;
+   padding: 28px 24px;
+   height: unset !important;
+}
+
+.ourCore-card__number {
+   color: #928D7C;
+   font-size: 20px;
+   line-height: 28px;
+   margin-bottom: 80px;
+}
+
+.ourCore-card__title {
+   font-size: 28px;
+   line-height: 36px;
+   margin-bottom: 24px;
+}
+
+.ourCore-card__desc {
+   font-size: 20px;
+   line-height: 28px;
+}
+
+/* ------------------------------------------------------------------------------------ */
+
+.services {}
+
+.services__inner {}
+
+.services__title {
+   font-size: 72px;
+   line-height: 80px;
+   margin-bottom: 40px;
+   max-width: 1162px;
+}
+
+.services__btn {
+   margin-bottom: 80px;
+}
+
+.services-card__inner {
+   display: flex;
+   flex-direction: column;
+}
+
+.services-card__wrapper {
+   display: flex !important;
+   justify-content: space-between;
+   margin-bottom: 40px;
+   height: fit-content;
+}
+
+.services-card__img-wrapper {
+   background: #242420;
+   border-radius: 20px;
+   width: 656px;
+   height: 520px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-right: 22px;
+   padding: 0 20px;
+}
+
+.services-card__img {}
+
+.services-card__content {
+   max-width: 656px;
+   height: fit-content;
+   font-family: 'Stolzl-Book';
+}
+
+.services-card__title {
+   font-size: 44px;
+   line-height: 52px;
+   margin-bottom: 16px;
+   font-family: 'Stolzl-Regular';
+}
+
+.services-card__desc {
+   font-size: 20px;
+   line-height: 28px;
+   margin-bottom: 40px;
+}
+
+.services-card__list-title {
+   font-size: 20px;
+   line-height: 28px;
+   color: #928D7C;
+   margin-bottom: 12px;
+}
+
+.services-card__list {}
+
+.services-card__point {
+   display: flex;
+   gap: 12px;
+   margin-bottom: 16px;
+}
+
+@media (max-width: 1024px) {
+   .main__content {
+      flex-direction: column-reverse;
+   }
+
+   .main-img__wrapper {
+      width: 100%;
+      height: 374px;
+      margin-bottom: 60px;
+   }
+
+   .main__title {
+      font-size: 90px;
+      line-height: 90px;
+   }
+
+   .main__btn {
+      margin-bottom: 0;
+   }
+
+   .main-content__text {
+      gap: 24px;
+   }
+}
+
+@media (max-width: 768px) {
+   .main__title {
+      font-size: 58px;
+      line-height: 58px;
+   }
+
+   .main-content__text {
+      margin-right: 0;
+   }
+
+   .main-content__desc {
+      font-size: 16px;
+      line-height: 20px;
+   }
+
+   .ourCore__title {
+      font-size: 20px;
+      line-height: 24px;
+   }
+
+   .services {
+      padding: 60px 0;
+   }
+
+   .services__title {
+      font-size: 28px;
+      line-height: 32px;
+   }
+
+   .services__btn {
+      margin-bottom: 44px;
+   }
+
+   .services-card__wrapper {
+      flex-direction: column;
+      background: #242420;
+      border-radius: 20px;
+      padding: 28px 24px;
+   }
+
+   .services-card__inner {
+      display: flex;
+      flex-direction: unset;
+   }
+
+   .services-card__img-wrapper {
+      width: fit-content;
+      padding-bottom: 40px;
+      height: fit-content;
+   }
+
+   .services-card__title {
+      font-size: 18px;
+      line-height: 24px;
+   }
+
+   .services-card__desc {
+      font-size: 14px;
+      line-height: 22px;
+   }
+
+   .services-card__list-title {
+      font-size: 14px;
+      line-height: 22px;
+   }
+
+   .services-card__point {
+      font-size: 14px;
+      line-height: 18px;
+   }
+
+   .services-card__point img {
+      width: 10px;
+   }
+
+   .ourCore-card__wrapper {
+      flex-wrap: nowrap;
+      gap: 0px;
+      margin-bottom: 20px;
+      height: 100%;
+   }
+
+   .ourCore {
+      padding: 0 0 80px;
+   }
+
+   .ourCore-card {
+      width: 100% !important;
+   }
+
+   .ourCore-card__number {
+      margin-bottom: 48px;
+   }
+
+   .ourCore-card__title {
+      font-family: 'Stolzl-Regular';
+      font-size: 18px;
+      line-height: 24px;
+   }
+
+   .ourCore-card__desc {
+      font-size: 14px;
+      line-height: 22px;
+   }
+
+   .swiper-slide {
+      height: unset !important;
+      max-width: 100% !important;
+   }
+}
+
+@media (max-width: 425px) {
+   .services-card__img {
+      width: 140px;
+   }
+}

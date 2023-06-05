@@ -1,0 +1,461 @@
+@import url('./normalize.css');
+@import url('./header.css');
+@import url('./footer.css');
+
+@font-face {
+   font-family: 'Stolzl-Medium';
+   src: url('../fonts/stolzl_medium.otf');
+}
+
+@font-face {
+   font-family: 'Stolzl-Regular';
+   src: url('../fonts/stolzl_regular.otf');
+}
+
+@font-face {
+   font-family: 'Stolzl-Book';
+   src: url('../fonts/stolzl_book.otf');
+}
+
+*,
+*::after,
+*::before {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+ul {
+   list-style: none;
+}
+
+a {
+   text-decoration: none;
+   color: inherit;
+   cursor: pointer;
+}
+
+
+body {
+   background: #000000;
+   color: #FFFFFF;
+   width: 100%;
+}
+
+.container {
+   max-width: 1440px;
+   margin: 0 auto;
+   padding: 0 44px;
+}
+
+.btn {
+   background: #ED9507;
+   outline: 0 !important;
+   border: 1px solid #ED9507;
+   border-radius: 12px;
+   padding: 20px 16px;
+   display: flex;
+   gap: 20px;
+   height: 56px;
+   width: fit-content;
+   align-items: center;
+   stroke: #FFFFFF;
+   font-family: 'Stolzl-Regular';
+   font-size: 18px;
+   line-height: 24px;
+   transition: 0.5s all;
+}
+
+.btn:hover {
+   color: #ED9507;
+   border: 1px solid #ED9507;
+   background: inherit;
+}
+
+.btn:hover svg {
+   stroke: #ED9507;
+}
+
+.goModal-btn {
+   border-radius: 12px;
+   padding: 16px;
+   display: flex;
+   gap: 20px;
+   background: #FFFFFF;
+   stroke: #000000;
+   color: #000000;
+   width: fit-content;
+   align-items: center;
+   font-family: 'Stolzl-Regular';
+   font-size: 18px;
+   line-height: 24px;
+   border: 1px solid #FFFFFF;
+   transition: 0.5s all;
+}
+
+.goModal-btn:hover {
+   color: #FFFFFF;
+   stroke: #FFFFFF;
+   background: inherit;
+}
+
+.bg-img {
+   position: absolute;
+   z-index: -1;
+}
+
+.cut {
+   display: block;
+}
+
+.text-underline {
+   text-decoration: underline;
+}
+
+.grey {
+   opacity: 0.4;
+}
+
+.orange {
+   color: #ED9507;
+}
+
+.input {
+   background-color: inherit;
+   outline: none;
+   border: none;
+   height: 54px;
+   padding-bottom: 16px;
+   width: 311px;
+   color: #FFF;
+   position: relative;
+   outline-offset: 0;
+}
+
+.invalid {
+   border-color: red;
+   color: red;
+}
+
+.title {
+   font-family: 'Stolzl-Book';
+   font-size: 122px;
+   line-height: 122px;
+}
+
+.subtitle {
+   font-family: 'Stolzl-Regular';
+   font-weight: 400;
+   font-size: 72px;
+   line-height: 80px;
+}
+
+.desc {
+   font-family: 'Stolzl-Book';
+   font-size: 22px;
+   line-height: 36px;
+}
+
+.subdesc {}
+
+/* ---------------------------------------------------------- */
+
+.swiper-scrollbar {}
+
+.swiper-scrollbar-drag {
+   background: #FFFFFF !important;
+}
+
+/* ---------------------------------------------------------- */
+
+/* FORM START */
+
+
+.form__wrap {
+   max-width: fit-content;
+   height: fit-content;
+   display: flex;
+   flex-direction: column;
+   gap: 40px;
+}
+
+.form__error-message {
+   margin-left: 24px;
+}
+
+.form__success-message {
+   width: 690px;
+}
+
+.form__success-message,
+.form__error-message {
+   display: none;
+}
+
+.form--hidden {
+   display: none;
+}
+
+.form__success-message--visible {
+   display: block !important;
+
+}
+
+.input__wrap {
+   display: flex;
+   gap: 24px;
+
+}
+
+.input__inner {
+   border-bottom: 1px solid #FFFFFF40;
+}
+
+.modal__name {}
+
+.input__name {}
+
+.modal__surname {}
+
+.input__surname {}
+
+.modal__email {}
+
+.input__email {}
+
+.modal__subject {}
+
+.input__subject {
+   width: 100% !important;
+}
+
+.modal__message {}
+
+.input__message {
+   height: 98px;
+   width: 100% !important;
+   resize: none;
+}
+
+.checkbox {
+   display: flex;
+   flex-direction: column;
+   gap: 12px;
+}
+
+.checkbox__wrap {
+   position: relative;
+}
+
+.input__checkbox {
+   position: absolute;
+   z-index: -1;
+   opacity: 0;
+}
+
+.input__checkbox+label {
+   display: inline-flex;
+   user-select: none;
+}
+
+.input__checkbox+label::before {
+   content: '';
+   display: inline-block;
+   width: 20px;
+   height: 20px;
+   flex-shrink: 0;
+   flex-grow: 0;
+   border: 0.5px solid rgba(255, 255, 255, 0.16);
+   backdrop-filter: blur(13px);
+   border-radius: 6px;
+   margin-right: 12px;
+   background-repeat: no-repeat;
+   background-position: center center;
+   background-size: 50% 50%;
+}
+
+/* стили при наведении курсора на checkbox */
+.input__checkbox:not(:disabled):not(:checked)+label:hover::before {
+   border: 0.5px solid rgba(255, 255, 255, 0.16);
+}
+
+/* стили для активного чекбокса (при нажатии на него) */
+.input__checkbox:not(:disabled):active+label::before {
+   background: #ED9507;
+   border-color: rgba(255, 255, 255, 0.16);
+   ;
+}
+
+/* стили для чекбокса, находящегося в состоянии checked */
+.input__checkbox:checked+label::before {
+   border-color: #FFFFFF;
+   background-color: #ED9507;
+   background-image: url("../images/checkbox-checked.svg");
+}
+
+.checkbox {
+   margin-bottom: 1em;
+}
+
+.modal__checkbox {}
+
+.modal__checkbox {}
+
+.form-modal__btn,
+.form-modal__btn1,
+.succes__btn,
+.ooops__btn {}
+
+.modal__btn-wrap {
+   display: flex;
+}
+
+.succes__btn {
+   width: 319px;
+   height: 54px;
+   text-align: center;
+   display: flex;
+   justify-content: center;
+}
+
+.ooops__btn {
+   width: 219px;
+   height: 54px;
+   display: flex;
+   justify-content: center;
+}
+
+/* FORM END */
+
+/* GOMODAL START */
+
+.goModal {
+   padding: 100px 0 50px;
+}
+
+.goModal__inner {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+}
+
+.goModal__title {
+   font-weight: 800;
+   font-size: 48px;
+   line-height: 56px;
+   margin-bottom: 16px;
+}
+
+.goModal__subtitle {
+   font-weight: 600;
+   font-size: 24px;
+   line-height: 32px;
+   margin-bottom: 48px;
+}
+
+.goModal__desc {
+   font-weight: 600;
+   font-size: 18px;
+   line-height: 34px;
+   opacity: 0.8;
+   margin-bottom: 24px;
+}
+
+.goModal__btn {}
+
+
+
+/* GOMODAL END */
+
+@media screen and (max-width: 1024px) {
+   .goModal {
+      padding: 42px 0;
+   }
+
+   .goModal__title {
+      font-size: 39px;
+      line-height: 56px;
+   }
+
+   .goModal__subtitle {
+      font-size: 21px;
+      line-height: 25px;
+      margin-bottom: 32px;
+   }
+}
+
+@media screen and (max-width: 768px) {
+   .container {
+      padding: 0 40px;
+   }
+
+   .subtitle {
+      font-size: 50px;
+      line-height: 56px;
+   }
+
+   .main {
+      padding: 80px 0 44px !important;
+   }
+
+   .btn {
+      height: 38px;
+      font-size: 14px;
+      line-height: 18px;
+      gap: 8px;
+      border-radius: 6px;
+   }
+}
+
+@media screen and (max-width: 650px) {
+   .input__wrap {
+      flex-direction: column;
+      gap: 14px;
+   }
+
+   .input {
+      width: 100%;
+   }
+
+}
+
+@media screen and (max-width: 500px) {
+   .container {
+      padding: 0 16px;
+   }
+
+   .form__wrap {
+      gap: 24px;
+   }
+
+   .goModal__title {
+      font-size: 30px;
+      line-height: 42px;
+   }
+
+   .goModal__subtitle {
+      font-size: 18px;
+      line-height: 25px;
+      margin-bottom: 16px;
+   }
+
+   .goModal__desc {
+      font-size: 18px;
+      line-height: 26px;
+      margin-bottom: 16px;
+   }
+
+}
+
+@media screen and (max-width: 425px) {
+   .desc {
+      font-size: 14px;
+      line-height: 22px;
+   }
+
+   .subtitle {
+      font-size: 28px;
+      line-height: 32px;
+   }
+}
